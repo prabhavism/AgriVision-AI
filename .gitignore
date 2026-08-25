@@ -7,3 +7,4 @@ backend/data/external/*
 .ipynb_checkpoints/
 .DS_Store
 node_modules/
+backend/data/processed/*.csv
