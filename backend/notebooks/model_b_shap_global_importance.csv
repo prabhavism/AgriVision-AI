@@ -1,0 +1,30 @@
+feature,importance
+crop_maize,259.2219702569328
+crop_cotton,194.3829573390105
+crop_rice,192.01035098374962
+humidity_pct,121.4756191796012
+season_Rabi,113.72785232194728
+state_name_Madhya Pradesh,111.74886565881661
+solar_radiation_mj_m2_day,77.79972186821026
+state_name_Maharashtra,54.776013831735725
+temperature_c,51.16258877867393
+wind_speed_m_s,49.90533648527195
+state_name_Orissa,47.78558586599675
+area_ha,40.90363927573835
+state_name_Uttar Pradesh,39.359642175558086
+state_name_West Bengal,34.47181395146299
+state_name_Jharkhand,30.053197716514973
+state_name_Himachal Pradesh,25.825100153860767
+state_name_Gujarat,23.86268550341201
+state_name_Bihar,23.53557131759723
+state_name_Assam,22.196940330688193
+state_name_Rajasthan,21.043005037072724
+state_name_Chhattisgarh,16.612527907226013
+state_name_Punjab,13.626886502769828
+state_name_Haryana,13.124769119528068
+rainfall_mm,12.953252770232927
+state_name_Telangana,12.055106448998329
+state_name_Kerala,11.221615748517868
+state_name_Karnataka,7.331372362590499
+state_name_Tamil Nadu,4.354141782295791
+state_name_Uttarakhand,2.7336266844924983
