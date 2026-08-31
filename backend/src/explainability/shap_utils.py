@@ -71,17 +71,19 @@ def explain_yield_prediction(model_b, scaler_b, model_b_cols, explainer_b,
     explanation_parts = []
     for feat, val in top_features:
         direction = "increased" if val > 0 else "decreased"
-        is_categorical = feat.startswith('state_name_') or feat.startswith('crop_') or feat.startswith('season_')
         clean_name = feat.replace('state_name_','').replace('crop_','').replace('season_','')
+        is_active = input_dict[feat] == 1
 
-        if is_categorical:
-            is_active = input_dict[feat] == 1
-            if is_active:
-                explanation_parts.append(f"being in {clean_name} {direction} predicted yield")
-            else:
-                explanation_parts.append(f"not being {clean_name} {direction} predicted yield")
+        if feat.startswith('state_name_'):
+            phrase = f"being in {clean_name}" if is_active else f"not being in {clean_name}"
+        elif feat.startswith('crop_'):
+            phrase = f"the crop being {clean_name}" if is_active else f"the crop not being {clean_name}"
+        elif feat.startswith('season_'):
+            phrase = f"the season being {clean_name}" if is_active else f"the season not being {clean_name}"
         else:
-            explanation_parts.append(f"{clean_name} {direction} predicted yield")
+            phrase = clean_name
+
+        explanation_parts.append(f"{phrase} {direction} predicted yield")
 
     explanation_text = f"Predicted yield: {pred_yield:.0f} kg/ha. Key factors: " + ", ".join(explanation_parts) + "."
 
